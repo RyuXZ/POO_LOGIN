@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sistema
+namespace Sistema.Catalogo2
 {
-    public partial class frmlogin : Form
+    public partial class Plantilla : Form
     {
-        public frmlogin()
+        public Plantilla()
         {
             InitializeComponent();
         }

@@ -33,8 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,17 +52,106 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clases\personas.cs" />
-    <Compile Include="frmlogin.cs">
+    <Compile Include="Catalogo2\Plantilla.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmlogin.Designer.cs">
+    <Compile Include="Catalogo2\Plantilla.Designer.cs">
+      <DependentUpon>Plantilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clases\generales.cs" />
+    <Compile Include="clases\ClRoles.cs" />
+    <Compile Include="clases\CLUSUARIOS.cs" />
+    <Compile Include="clases\Conexion.cs" />
+    <Compile Include="clases\globales.cs" />
+    <Compile Include="clases\Modulo.cs" />
+    <Compile Include="clases\Permisos.cs" />
+    <Compile Include="clases\personas.cs" />
+    <Compile Include="formularios\FrRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\FrRoles.Designer.cs">
+      <DependentUpon>FrRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\generales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\generales.Designer.cs">
+      <DependentUpon>generales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Modulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Modulo.Designer.cs">
+      <DependentUpon>Modulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Permisos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Permisos.Designer.cs">
+      <DependentUpon>Permisos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\SearchForm.designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Usuario.Designer.cs">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\frmlogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\frmlogin.Designer.cs">
       <DependentUpon>frmlogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo2\rptRoles.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptRoles.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmlogin.resx">
+    <EmbeddedResource Include="Catalogo2\Plantilla.resx">
+      <DependentUpon>Plantilla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\FrRoles.resx">
+      <DependentUpon>FrRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\generales.resx">
+      <DependentUpon>generales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Modulo.resx">
+      <DependentUpon>Modulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Permisos.resx">
+      <DependentUpon>Permisos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\SearchForm.resx">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Usuario.resx">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\frmlogin.resx">
       <DependentUpon>frmlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo2\rptRoles.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRoles.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -66,6 +161,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -84,8 +180,16 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="formularios\" />
     <Folder Include="informe\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-búsqueda-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-búsqueda-301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
